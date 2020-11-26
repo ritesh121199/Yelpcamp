@@ -1,0 +1,19 @@
+<%- include ('../partials/header');-%>
+
+
+
+<div class="container">
+<div class="jumbotron">
+<h1>Edit a Comment</h1>
+</div>
+</div>
+<div class="container">
+<form action="/campgrounds/<%=campground_id%>/comment/<%=comments._id%>?_method=PUT" method="POST" >
+  <div class="form-group">
+    <input type="text" class="form-control" name="comment[text]" value="<%=comments.text%>">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+
+<%- include ('../partials/footer'); -%>
